@@ -1,0 +1,32 @@
+{
+    "name": "wlkata_micro_bit",
+    "version": "0.0.1",
+    "description": "Library for communication between wlkat robotic arm and micro bit through UART",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts",
+        "main.blocks",
+        "wlkata.ts",
+        "_locales/en/Wlkata-strings.json",
+        "_locales/zh-cn/Wlkata-strings.json",
+        "_locales/zh-tw/Wlkata-strings.json"
+
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "targetVersions": {
+        "target": "6.0.26",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
+}

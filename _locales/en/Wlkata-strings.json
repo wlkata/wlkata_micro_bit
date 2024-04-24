@@ -1,0 +1,35 @@
+{
+  "wlkata.E4_uart|block": "E4 Mechanical Arm UART Initialization|TX: %XT|RX: %RX",
+  "wlkata.E4_sendMsg|block": "E4 Robot Arm Telegram Sender|Send %text",
+  "wlkata.E4_homing|block": "E4 Robot Arm Homing",
+  "wlkata.E4_reset|block": "E4 Robot Arm Reset",
+  "wlkata.E4_zero|block":"E4 Robot Arm Zero Position",
+  "wlkata.E4_runFile|block": "E4 Robot Arm Execute G-code Offline File|%file",
+  "wlkata.E4_movePose|block":"E4 Robot Arm Cartesian Movement|%a1|%a2|X: %a3|Y: %a4|Z: %a5|A: %a6|D: %a7",
+  "wlkata.E4_moveJoints|block":"E4 Robot Arm Joint Movement|%a1|J1:%a2|J2:%a3|J3:%a4|J4:%a5",
+  "wlkata.E4_movePause|block":"E4 Robot Arm|%a1 Movement",
+  "wlkata.E4_moveExjDist|block":"E4 Robot Arm 7th Axis|%a1 Mode |Move %a2 Distance",
+  "wlkata.E4_setEndtGripper|blcok":"E4 Robot Arm Electric Gripper|%a1",
+  "wlkata.E4_setEndtPump|block":"E4 Robot Arm Vacuum Suction Cup|%a1",
+  "wlkata.E4_setEndtPump1|block":"E4 Robot Arm Three-finger Soft Gripper|%a1",
+  "wlkata.E4_getState|block":"E4 Robot Arm State",
+
+  "wlkata.POSE1.MOVEP|block":"Fast",
+  "wlkata.POSE1.MOVEL|block":"Linear",
+  "wlkata.POSE1.JUMP|block":"Gate-shaped",
+  "wlkata.POSE2.ABS|block":"Absolute Position",
+  "wlkata.POSE2.INC|block":"Relative Position",
+  "wlkata.POSE3.Halt|block":"Stop",
+  "wlkata.POSE3.Go|block":"Resume",
+  "wlkata.POSE4.OPEN|block":"Open",
+  "wlkata.POSE4.CLOSE|block":"Close",
+
+  "wlkata.POSE5.breathe_in|block":"Inhale",
+  "wlkata.POSE5.blackout|block":"Turn Off",
+
+  "wlkata.POSE6.breathe_in|blcok":"Inhale",
+  "wlkata.POSE6.blackout|block":"Turn Off",
+  "wlkata.POSE6.breathe_out|block":"Exhale"
+
+
+}
