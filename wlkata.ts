@@ -28,69 +28,49 @@ namespace wlkata {
         //% block=";"
         SemiColon = 59,
     }
-    export enum MyEnum {
-        //% blockId="P0" block="P0"
-        P0,
-        //% blockId="P1" block="P1"
-        P1,
-        //% blockId="P2" block="P2"
-        P2,
-        //% blockId="P8" block="P8"
-        P8,
-        //% blockId="P12" block="P12"
-        P12,
-        //% blockId="P13" block="P13"
-        P13,
-        //% blockId="P14" block="P14"
-        P14,
-        //% blockId="P15" block="P15"
-        P15,
-        //% blockId="P16" block="P16"
-        P16
 
-    }
     export enum POSE1 {
-        //% blockId="MOVEP"  block="MOVEP"
-        MOVEP,
-        //% blockId="MOVEL" block="MOVEL"
-        MOVEL,
-        //% blockId="JUMP" block="JUMP"
-        JUMP
+        //% blockId="Fast_movement"  block="Fast_movement"
+        Fast_movement,
+        //% blockId="Linear_motion" block="Linear_motion"
+        Linear_motion,
+        //% blockId="Door_track_movement" block="Door_track_movement"
+        Door_track_movement
     }
     export enum POSE2 {
-        //% blockId="ABS" block="ABS"
-        ABS,
-        //% blockId="INC" block="INC"
-        INC
+        //% blockId="Absolute" block="Absolute"
+        Absolute,
+        //% blockId="Relative" block="Relative"
+        Relative
     }
     export enum POSE3 {
-        //%blockId="halt" block="halt"
-        Halt,
-        //%blockId="go" block="go"
-        Go
+        //%blockId="Paust" block="Paust"
+        Paust,
+        //%blockId="Conttnue" block="Conttnue"
+        Conttnue
     }
     export enum POSE4 {
-        //%blockId="OPEN" block="OPEN"
-        OPEN,
-        //%blockId="CLOSE" block="CLOSE"
-        CLOSE,
-        //%blockId="OFF" block="OFF"
-        OFF
+        //%blockId="Open" block="Open"
+        Open,
+        //%blockId="Close" block="Close"
+        Close,
+        //%blockId="Power_OFF" block="Power_OFF"
+        Power_OFF
     }
     export enum POSE5 {
-        //%blockId="breathe_in" block="breathe_in"
-        breathe_in,
-        //%blockId="blackout" block="blackout"
-        blackout
+        //%blockId="Inhale" block="Inhale"
+        Inhale,
+        //%blockId="Power_OFF" block="Power_OFF"
+        Power_OFF
 
     }
     export enum POSE6 {
-        //%blockId="breathe_in" block="breathe_in"
-        breathe_in,
-        //%blockId="breathe_out" block="breathe_out"
-        breathe_out,
+        //%blockId="Inhale" block="Inhale"
+        Inhale,
+        //%blockId="Blow" block="Blow"
+        Blow,
         //%blockId="blackout" block="blackout"
-        blackout
+        Power_OFF
 
 
     }
@@ -171,8 +151,6 @@ namespace wlkata {
 
     }
 
-
-
     //% weight=94
     //% blockId=E4_movePose block="E4 Robot Arm Cartesian Movement|%a1|%a2|X: %a3|Y: %a4|Z: %a5|A: %a6|D: %a7"
     //% a3.defl=192 a4.defl=0 a5.defl=230 a6.defl=0 a7.defl=0
@@ -181,21 +159,21 @@ namespace wlkata {
         let name_a1 = "";
         let name_a2 = "";
         switch (a1) {
-            case POSE1.MOVEP:
+            case POSE1.Fast_movement:
                 name_a1 = "G00";
                 break;
-            case POSE1.MOVEL:
+            case POSE1.Linear_motion:
                 name_a1 = "G01";
                 break;
-            case POSE1.JUMP:
+            case POSE1.Door_track_movement:
                 name_a1 = "G05";
                 break;
         }
         switch (a2) {
-            case POSE2.ABS:
+            case POSE2.Absolute:
                 name_a2 = "G90";
                 break;
-            case POSE2.INC:
+            case POSE2.Relative:
                 name_a2 = "G91";
                 break;
         }
@@ -211,10 +189,10 @@ namespace wlkata {
     export function E4_moveJoints(a1: POSE2, a2: number, a3: number, a4: number, a5: number): void {
         let name_a1 = "";
         switch (a1) {
-            case POSE2.ABS:
+            case POSE2.Absolute:
                 name_a1 = "G90";
                 break;
-            case POSE2.INC:
+            case POSE2.Relative:
                 name_a1 = "G91";
                 break;
         }
@@ -226,10 +204,10 @@ namespace wlkata {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function E4_movePause(a1: POSE3): void {
         switch (a1) {
-            case POSE3.Halt:
+            case POSE3.Paust:
                 E4_sendMsg("!")
                 break;
-            case POSE3.Go:
+            case POSE3.Conttnue:
                 E4_sendMsg("~")
                 break;
         }
@@ -241,10 +219,10 @@ namespace wlkata {
     export function E4_moveExjDist(a1: POSE2, a2: number): void {
         let name_a1 = "";
         switch (a1) {
-            case POSE2.ABS:
+            case POSE2.Absolute:
                 name_a1 = "G90";
                 break;
-            case POSE2.INC:
+            case POSE2.Relative:
                 name_a1 = "G91";
                 break;
 
@@ -256,13 +234,13 @@ namespace wlkata {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function E4_setEndtGripper(a1: POSE4): void {
         switch (a1) {
-            case POSE4.OPEN:
+            case POSE4.Open:
                 E4_sendMsg("M3 S40")
                 break;
-            case POSE4.CLOSE:
+            case POSE4.Close:
                 E4_sendMsg("M3 S60")
                 break;
-            case POSE4.OFF:
+            case POSE4.Power_OFF:
                 E4_sendMsg("M3 S0")
                 break;
         }
@@ -274,11 +252,11 @@ namespace wlkata {
     export function E4_setEndtPump(a1: POSE5): void {
 
         switch (a1) {
-            case POSE5.breathe_in:
+            case POSE5.Inhale:
                 E4_sendMsg("M3 S1000")
 
                 break;
-            case POSE5.blackout:
+            case POSE5.Power_OFF:
                 E4_sendMsg("M3 S0")
 
                 break;
@@ -290,15 +268,15 @@ namespace wlkata {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function E4_setEndtPump1(a1: POSE6): void {
         switch (a1) {
-            case POSE6.breathe_in:
+            case POSE6.Inhale:
                 E4_sendMsg("M3 S1000")
 
                 break;
-            case POSE6.blackout:
+            case POSE6.Power_OFF:
                 E4_sendMsg("M3 S0")
 
                 break;
-            case POSE6.breathe_out:
+            case POSE6.Blow:
                 E4_sendMsg("M3 S500")
                 break;
         }

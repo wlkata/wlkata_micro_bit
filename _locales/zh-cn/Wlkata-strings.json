@@ -15,22 +15,24 @@
   "wlkata.E4_setEndtPump1|block":"E4机械臂三指柔爪|%a1",
   "wlkata.E4_getState|block":"E4机械臂状态",
 
-  "wlkata.POSE1.MOVEP|block":"快速",
-  "wlkata.POSE1.MOVEL|block":"直线",
-  "wlkata.POSE1.JUMP|block":"门型",
-  "wlkata.POSE2.ABS|block":"绝对位置",
-  "wlkata.POSE2.INC|block":"相对位置",
-  "wlkata.POSE3.Halt|block":"暂停",
-  "wlkata.POSE3.Go|block":"继续",
-  "wlkata.POSE4.OPEN|block":"打开",
-  "wlkata.POSE4.CLOSE|block":"关闭",
+  "wlkata.POSE1.Fast_movement|block":"快速",
+  "wlkata.POSE1.Linear_motion|block":"直线",
+  "wlkata.POSE1.Door_track_movement|block":"门型",
+  "wlkata.POSE2.Absolute|block":"绝对位置",
+  "wlkata.POSE2.Relative|block":"相对位置",
+  "wlkata.POSE3.Paust|block":"暂停",
+  "wlkata.POSE3.Conttnue|block":"继续",
 
-  "wlkata.POSE5.breathe_in|block":"吸气",
-  "wlkata.POSE5.blackout|block":"关闭",
+  "wlkata.POSE4.Open|block":"打开",
+  "wlkata.POSE4.Close|block":"关闭",
+  "wlkata.POSE4.Power_OFF|block":"停止",
 
-  "wlkata.POSE6.breathe_in|blcok":"吸气",
-  "wlkata.POSE6.blackout|block":"关闭",
-  "wlkata.POSE6.breathe_out|block":"吹气"
+  "wlkata.POSE5.Inhale|block":"吸气",
+  "wlkata.POSE5.Power_OFF|block":"关闭",
+
+  "wlkata.POSE6.Inhale|block":"吸气",
+  "wlkata.POSE6.Power_OFF|block":"关闭",
+  "wlkata.POSE6.Blow|block":"吹气"
 
 
 }
