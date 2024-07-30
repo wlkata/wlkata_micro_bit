@@ -1,6 +1,6 @@
 {
     "name": "wlkata_micro_bit",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Library for communication between wlkat robotic arm and micro bit through UART",
     "dependencies": {
         "core": "*",

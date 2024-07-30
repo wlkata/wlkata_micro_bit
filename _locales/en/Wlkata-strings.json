@@ -10,7 +10,7 @@
   "wlkata.E4_moveJoints|block":"E4 Robot Arm Joint Movement|%a1|J1:%a2|J2:%a3|J3:%a4|J4:%a5",
   "wlkata.E4_movePause|block":"E4 Robot Arm|%a1 Pause Movement",
   "wlkata.E4_moveExjDist|block":"E4 Robot Arm 7th Axis|%a1 Mode |Move %a2 Distance",
-  "wlkata.E4_setEndtGripper|block":"E4 Robot Arm Electric Gripper|%a1",
+  "wlkata.E4_setEndtGripper|block":"E4 Robot Arm servo gripper|%a1",
   "wlkata.E4_setEndtPump|block":"E4 Robot Arm Vacuum Pump|%a1",
   "wlkata.E4_setEndtPump1|block":"E4 Robot Arm Three-finger Soft Gripper|%a1",
   "wlkata.E4_getState|block":"E4 Robot Arm Status",

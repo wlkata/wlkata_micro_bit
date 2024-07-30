@@ -44,10 +44,10 @@ namespace wlkata {
         Relative
     }
     export enum POSE3 {
-        //%blockId="Paust" block="Paust"
-        Paust,
-        //%blockId="Conttnue" block="Conttnue"
-        Conttnue
+        //%blockId="pause" block="pause"
+        pause,
+        //%blockId="continue" block="continue"
+        continue
     }
     export enum POSE4 {
         //%blockId="Open" block="Open"
@@ -69,7 +69,7 @@ namespace wlkata {
         Inhale,
         //%blockId="Blow" block="Blow"
         Blow,
-        //%blockId="blackout" block="blackout"
+        //%blockId="Power_OFF" block="Power_OFF"
         Power_OFF
 
 
@@ -204,10 +204,10 @@ namespace wlkata {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function E4_movePause(a1: POSE3): void {
         switch (a1) {
-            case POSE3.Paust:
+            case POSE3.pause:
                 E4_sendMsg("!")
                 break;
-            case POSE3.Conttnue:
+            case POSE3.continue:
                 E4_sendMsg("~")
                 break;
         }
@@ -230,7 +230,7 @@ namespace wlkata {
         E4_sendMsg(name_a1 + " D" + a2)
     }
     //% weight=90
-    //% blockId=E4_setEndtGripper block="E4 Robot Arm Electric Gripper|%a1"
+    //% blockId=E4_setEndtGripper block="E4 Robot Arm servo gripper|%a1"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function E4_setEndtGripper(a1: POSE4): void {
         switch (a1) {
